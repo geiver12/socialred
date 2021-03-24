@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/dbredsocial', {
+mongoose.connect('mongodb+srv://geiverbotello:Aa123456@cluster0.mustt.mongodb.net/nodemongo?retryWrites=true&w=majority', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
