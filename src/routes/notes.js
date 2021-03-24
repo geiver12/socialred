@@ -57,7 +57,6 @@ router.put('/notes/edit-note/:id', isAuthenticated, async(req, res) => {
     res.redirect('/notes');
 });
 
-
 router.get('/notes', isAuthenticated, async(req, res) => {
     const notes = await Note.find({ user: req.user.id }).sort({
         date: 'desc'

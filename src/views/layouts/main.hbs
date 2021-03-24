@@ -1,50 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Red Social </title>
+     <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/public/css/all.min.css">
+     <link rel="stylesheet" href="/public/css/style.css">
+     
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>El Catire</title>
-    <!--font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- Boopstap 4-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <!-- CSS local -->
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- DATA TABLE -->
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
-</head>
+ </head>
+ <body>
+     <nav class="nabvar nabvar-dark bg-dark">
+         <div class="container">
+             <a href="/" class="nabvar-brand"> <img src="/public/img/logo.png" alt="No shared" ></a>
+         </div>
+     </nav>
+     <div class="container p-4">
+         <div class="row">
+             <div class="col-md-8">
+                 {{{body}}}
+             </div>
+             <div class="col-md-4">
+                 {{>stats}}
+                 {{>popular}}
+                 {{>comments}}
+             </div>
+         </div>
 
-<body>
-
-    {{>navigation}}
-    <main class="container p-4">
-        {{>messages}}
-        {{>errors}}
-        {{{body}}}
-    </main>
-
-    <!-- Boopstrap js-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-        <script type = "text/javascript" >
-    $(document).ready(function() {
-        //Asegurate que el id que le diste a la tabla sea igual al texto despues del simbolo #
-        $('#userList').DataTable();
-    }); </script>
-</body>
-
-</html>
+     </div>
+     
+     <script src="/public/bootstrap.min.js" ></script>
+     <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="/public/js/test.js"></script>
+ </body>
+ </html>

@@ -5,11 +5,7 @@ const {
 
 
 const IngredientesSchema = new Schema({
-    id: {
-        type: Number,
-        required: true
-    },
-    nombre: {
+    title: {
         type: String,
         required: true
     }

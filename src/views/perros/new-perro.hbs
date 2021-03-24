@@ -1,0 +1,49 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Nuevo Perro</h3>
+        </div>
+        <div class="card-body">
+            <form action="/perros/new-perro" method="POST" enctype="multipart/form-data">
+                <div class="input-group mb-3">
+                    <div class="custom-file">
+                        <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02"
+                            aria-describedby="inputGroupFileAddon02">Choose
+                            file</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Title" class="form-control">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" class="form-control" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="precio" placeholder="Precio" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <select class="custom-select" id="inputGroupSelect02" name="tipotitle">
+                            {{#each tipos}}
+                            <option value="{{title}}">{{title}}</option>
+                            {{/each}}
+                        </select>
+                        <div class="input-group-append">
+                            <label class="input-group-text" for="inputGroupSelect02">Escoge</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Save</button>
+                    </div>
+                    <div class="form-group">
+                        <a href="/perros" class="btn btn-danger btn-block">
+                            <i class="icon-remove"></i>
+                            Cancel
+                        </a>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

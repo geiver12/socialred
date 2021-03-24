@@ -1,0 +1,29 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Nuevo Tipo de Perro</h3>
+        </div>
+        <div class="card-body">
+            <form action="/tipos/new-tipo" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="pan" class="form-control" placeholder="Pan" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="salchicha" class="form-control" placeholder="Salchicha" autofocus>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                </div>
+                <div class="form-group">
+                    <a href="/tipos" class="btn btn-danger btn-block">
+                        <i class="icon-remove"></i>
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

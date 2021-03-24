@@ -7,6 +7,23 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.logo{
+.logo {
     width: 60%;
+}
+
+#sizetable {
+    width: 100px;
+    height: 100px;
+}
+
+#sizesucursales {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+#sizecompras {
+    width: 150px;
+    height: 150px;
+    margin: auto;
 }

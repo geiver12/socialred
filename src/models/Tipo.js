@@ -3,13 +3,16 @@ const {
     Schema
 } = mongoose;
 
-
 const TipoSchema = new Schema({
-    id: {
-        type: Number,
+    title: {
+        type: String,
         required: true
     },
-    description: {
+    pan: {
+        type: String,
+        required: true
+    },
+    salchicha: {
         type: String,
         required: true
     }

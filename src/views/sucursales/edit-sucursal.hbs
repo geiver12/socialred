@@ -1,0 +1,41 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h3>Edit Bebida</h3>
+        </div>
+        <div class="card-body">
+            <form action="/sucursales/edit-sucursal/{{sucursal.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_method" value="PUT">
+
+                <div class="input-group mb-3">
+                    <div class="custom-file" >
+                        <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02"
+                            aria-describedby="inputGroupFileAddon02">Choose file</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="title" placeholder="Title" class="form-control" value={{sucursal.title}}>
+                </div>
+                <div class="form-group">
+                    <textarea name="description" id="" class="form-control"
+                        placeholder="Description">{{sucursal.description}}</textarea>
+                </div>
+                     <div class="form-group">
+                    <textarea name="direccion" id="" class="form-control"
+                        placeholder="direccion">{{sucursal.direccion}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                </div>
+                <div class="form-group">
+                    <a href="/sucursales" class="btn btn-danger btn-block">
+                        <i class="icon-remove"></i>
+                        Cancel
+                    </a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

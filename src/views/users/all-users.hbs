@@ -1,0 +1,61 @@
+<div class="col-md-12 mx-auto">
+    <div class="card">
+        
+        <div class="card-body">
+            <a href="/users/new-user" class="btn btn-primary btn-lg active" role="button">Nuevo Usuario</a>
+            <div class="table-responsive">
+
+                <table id="userList" class="table table-bordered table-hover table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Cedula</th>
+                            <th>Edit</th>
+                            <th>Change Password</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each users}}
+                        <tr>
+                            <td>
+                                
+                            </td>
+                            <td>{{email}}</td>
+                            <td>{{nombre}}</td>
+                            <td>{{apellido}}</td>
+                            <td>{{cedula}}</td>
+                            <td>
+                                <a href="/users/edit/{{id}} ">
+                                    <button class="btn btn-primary btn-block btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </a>
+                            </td>
+                            
+                            <td>
+                                <a href="/users/updatepassword/{{id}} ">
+                                    <button class="btn btn-primary btn-block btn-sm">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </a>
+                            </td>
+                            <td>
+                                <form action="/users/delete/{{id}}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="btn btn-danger btn-block btn-sm" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+                            
+                        </tr {{/each}}>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

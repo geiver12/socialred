@@ -1,0 +1,58 @@
+<div class="row">
+    <div class="col-md-12 offset-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Factura del User: {{user.nombre}}+{{user.apellido}}</h2>
+            </div>
+        </div>
+    </DIV>
+</div>
+
+<div class="col-md-12 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="userList" class="table table-bordered table-hover table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Monto</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each temporals}}
+                        <tr>
+
+                            <td>{{title}}</td>
+                            <td>{{description}}</td>
+                            <td>{{precio}}</td>
+                            <td>{{cantidad}}</td>                            
+                            <td>{{monto}} .$</td>
+
+                        </tr>
+                        {{/each}}
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Monto Total</th>
+                        <th scope="col">{{montoTotal}}.$</th>
+                    </tbody>
+
+                </table>
+
+                <a href="/compras/factura-aprobada/{{montoTotal}}" class="btn btn-primary btn-block">
+                    <i class="icon-ok"></i>
+                    Emitir Factura!
+                </a>
+                <a href="/compras/cancel-factura" class="btn btn-danger btn-block">
+                    <i class="icon-remove"></i>
+                    Cancelar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

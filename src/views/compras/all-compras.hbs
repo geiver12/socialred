@@ -1,0 +1,130 @@
+{{#if temporals}}
+<div class="row">
+    <div class="col-md-12 offset-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Carrito de compra</h2>
+                <a href="/compras/proceso" class="btn btn-danger btn-block">
+                    <i class="icon-remove"></i>
+                    Confirmar Compra!
+                </a>
+            </div>
+        </div>
+    </DIV>
+</div>
+
+<div class="col-md-12 mx-auto">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="userList" class="table table-bordered table-hover table-striped">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Cantidad</th>
+                            <th>Cancelar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each temporals}}
+                        <tr>
+
+                            <td>{{title}}</td>
+                            <td>{{description}}</td>
+                            <td>{{precio}}</td>
+                            <td>{{cantidad}}</td>
+                            <td>
+                                <form action="/compras/delete/{{id}}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button class="btn btn-danger btn-block btn-sm" type="submit">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
+                            </td>
+
+                        </tr {{/each}}>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+<div class="row">
+    <div class="col-md-12 offset-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Bebidas</h2>
+            </div>
+        </div>
+    </div>
+
+    {{#each bebidas}}
+    <div class=" col-md-3">
+        <div class="card animated fadeInDown">
+            <div class="card-body">
+                <form action="/compras/add" method="POST" enctype="multipart/form-data">
+                    <img src="{{path}}" alt="" id="sizecompras">
+                    <h4 class="card-title d-flex justify-content-between align-items-center">{{title}} </h4>
+                    <input type="hidden" name="title" value={{title}}>
+                    <p class="card-text">
+                        {{description}}
+                    </p>
+                    <input type="hidden" name="description" value={{description}}>
+                    <p id="card-text" style="font-weight: bold">
+                        Precio $ :: {{precio}}
+                    </p>
+                    <input type="hidden" name="precio" value={{precio}}>
+                    <div class="form-group">
+                        <input type="number" name="cantidad" placeholder="Cantidad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Añadir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<div class="row">
+    <div class="col-md-12 offset-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Perros</h2>
+            </div>
+        </div>
+    </div>
+
+    {{#each perros}}
+    <div class=" col-md-3">
+        <div class="card animated fadeInDown">
+            <div class="card-body">
+                <form action="/compras/add" method="POST" enctype="multipart/form-data">
+                    <img src="{{path}}" alt="" id="sizecompras">
+                    <h4 class="card-title d-flex justify-content-between align-items-center">{{title}} </h4>
+                    <input type="hidden" name="title" value={{title}}>
+                    <p class="card-text">
+                        {{description}}
+                    </p>
+                    <input type="hidden" name="description" value={{description}}>
+                    <p id="card-text" style="font-weight: bold">
+                        Precio $ :: {{precio}}
+                    </p>
+                    <input type="hidden" name="precio" value={{precio}}>
+                    <div class="form-group">
+                        <input type="number" name="cantidad" placeholder="Cantidad" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">Añadir</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

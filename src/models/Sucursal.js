@@ -5,17 +5,37 @@ const {
 
 
 const SucursalSchema = new Schema({
-    id: {
-        type: Number,
-        required: true
-    },
-    nombre: {
+
+    title: {
         type: String,
         required: true
     },
     description: {
         type: String,
         required: true
+    },
+    direccion: {
+        type: String,
+        required: true
+    },
+    filename: {
+        type: String
+    },
+    path: {
+        type: String
+    },
+    originalname: {
+        type: String
+    },
+    mimetype: {
+        type: String
+    },
+    size: {
+        type: Number
+    },
+    create_at: {
+        type: Date,
+        default: Date.now
     }
 });
 

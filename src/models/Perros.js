@@ -5,25 +5,40 @@ const {
 
 
 const PerrosSchema = new Schema({
-    id: {
-        type: Number,
+    title: {
+        type: String,
         required: true
     },
     description: {
         type: String,
         required: true
     },
-    salchicha_id: {
+    tipotitle: {
+        type: String,
+        required: true
+    },
+    precio: {
         type: Number,
         required: true
     },
-    pan_id: {
-        type: Number,
-        required: true
+    filename: {
+        type: String
     },
-    tipo_id: {
-        type: Number,
-        required: true
+    path: {
+        type: String
+    },
+    originalname: {
+        type: String
+    },
+    mimetype: {
+        type: String
+    },
+    size: {
+        type: Number
+    },
+    create_at: {
+        type: Date,
+        default: Date.now
     }
 });
 
